@@ -113,7 +113,18 @@ color:#4aaaa5;
 	   padding-top: 10px;
 	   line-height: 30px;
    }
-    
+   /* css animations */
+    .main-content:hover  {
+    background-color: black;
+    color: white;
+    /* width: 200px;
+    height: 200px;} */
+     }
+
+     .portfolio:hover{ background-color: black;
+        color: white;}
+
+
 
 	
 /* 	porfolio here  */ /* 	porfolio here  */ /* 	porfolio here  */
@@ -209,6 +220,18 @@ footer  {
     padding-top: 2rem;
 
 }
+
+.box {
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #0000FF;
+    -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
 
 /* Animated social buttons */
 
@@ -503,3 +526,6 @@ input[type=message] {
               margin-left: 5rem;
           }
 }
+
+
+
