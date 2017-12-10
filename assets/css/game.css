@@ -1,0 +1,22 @@
+.container {
+  margin-left: 70px;
+  margin-right: 70px
+}
+.letter{
+  margin: 5px;
+  font-size: 20px;
+}
+
+#guessbox{
+padding: 50px;
+}
+
+#wrong li {
+  display: inline-table;
+  font-size: 20px;
+  color: #fc0000;
+}
+.jumbotron {
+  background-image: url("../images/hangmanbackground.jpg");
+  color: white;
+}

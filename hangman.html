@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/game.css" type="text/css">
+</head>
+<body>
+
+<!-- Jumbotron for Title -->
+<div class="jumbotron">
+    <h1 class="text-center">jQuery Hangman</h1>
+    <h3 class="text-center">My Hangman game made with Javascript/jQuery!</h3>
+    <h3 class="text-center">By Jeff Cameron</h3>
+    
+</div>
+
+<div class="container">
+
+    <div class="row">
+            <div class="col-lg-4">
+                    <div class="panel panel-default panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Your Word</h3>
+                        </div>
+        
+                        <div class="panel-body" >
+                               <h1 id ="guessBox"></h1>
+                           
+                        </div>
+                    </div>
+         </div>
+        <!-- Calculator Panel -->
+        <div class="col-lg-4">
+            <div class="panel panel-default panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Pick a Letter</h3>
+                </div>
+
+                <div class="panel-body">
+                    <div id="buttons">
+
+                    </div>
+             
+                    <br><br>
+                    <button id="button-clear" class="btn btn-default clear" value="clear"><h1>Reset</h1></button>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Result Panel -->
+        <div class="col-lg-6">
+        <div class="panel panel-default panel-danger" >
+                <div class="panel-heading">
+                    <h3 class="panel-title" id="guessCount">Guesses Remaing: </h3>
+                </div>
+                <div class="panel-body">
+                    <h1 id="wrong"></h1>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/javascript/game.js" type="text/javascript">
+</script>
+</body>
+</html>
