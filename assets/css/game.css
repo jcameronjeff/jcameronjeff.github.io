@@ -11,11 +11,27 @@
 padding: 50px;
 }
 
+.gamePanel{
+  margin: 0 auto;
+  margin-top: 10px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  -webkit-box-shadow: 0px 3px 38px 7px rgba(0,0,0,0.27);
+	-moz-box-shadow: 0px 3px 38px 7px rgba(0,0,0,0.27);
+	box-shadow: 0px 3px 38px 7px rgba(0,0,0,0.27);
+}
+
+#buttonPanel {
+  margin-bottom: 50px;
+}
+
 #wrong li {
-  display: inline-table;
+  display: inline-block;
   font-size: 20px;
   color: #fc0000;
 }
+
 .jumbotron {
   background-image: url("../images/hangmanbackground.jpg");
   color: white;

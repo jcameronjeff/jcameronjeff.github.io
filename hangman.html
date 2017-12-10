@@ -25,7 +25,7 @@
 
     <div class="row">
             <div class="col-lg-4">
-                    <div class="panel panel-default panel-warning">
+                    <div class="panel panel-default panel-warning gamePanel">
                         <div class="panel-heading">
                             <h3 class="panel-title">Your Word</h3>
                         </div>
@@ -38,27 +38,7 @@
          </div>
         <!-- Calculator Panel -->
         <div class="col-lg-4">
-            <div class="panel panel-default panel-warning">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Pick a Letter</h3>
-                </div>
-
-                <div class="panel-body">
-                    <div id="buttons">
-
-                    </div>
-             
-                    <br><br>
-                    <button id="button-clear" class="btn btn-default clear" value="clear"><h1>Reset</h1></button>
-
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Result Panel -->
-        <div class="col-lg-6">
-        <div class="panel panel-default panel-danger" >
+            <div class="panel panel-default panel-danger gamePanel" id = "wrongPanel" >
                 <div class="panel-heading">
                     <h3 class="panel-title" id="guessCount">Guesses Remaing: </h3>
                 </div>
@@ -67,6 +47,27 @@
                 
                 </div>
             </div>
+          
+        </div>
+
+        <!-- Result Panel -->
+        <div class="col-lg-6">
+                <div class="panel panel-default panel-warning gamePanel" id = "buttonPanel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Pick a Letter</h3>
+                        </div>
+        
+                        <div class="panel-body">
+                            <div id="buttons">
+        
+                            </div>
+                     
+                            <br><br>
+                            <button id="button-clear" class="btn btn-default btn-sm clear" value="clear"><h1>Reset</h1></button>
+        
+                        </div>
+        
+                    </div>
         </div>
     </div>
 </div>
