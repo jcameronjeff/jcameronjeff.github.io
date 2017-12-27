@@ -1,63 +1,154 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>About</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+   <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <title>Jeff Cameron</title>
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+  </head>
   
-    <link rel="stylesheet" href="assets/css/reset.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
-</head>
+ 
+  <body>
 
-<body background="assets/images/background.png" alt="background">
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="#">Jeff Cameron</a>
+              </div>
+              <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="#aboutAnch">About</a> 
+                  <li><a href="#portAnch">Portfolio</a></li>
+                  <li><a href="#connect">Contact Me</a></li>
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
+          
+   
 
+    </header>
 
-  <header>
     
-
-    <h1>Jeff Cameron</h1>
-    <div class="nav">
-        <ul>
-            <li><a href="index.html" class="hvr-grow">About</a></li> 
-            <li><a href="portfolio.html" class="hvr-grow">Portfolio</a></li>
-            <li><a href="contact.html" id="borderRight" class="hvr-grow">Contact</a></li>
-        </ul>
-    </div>
-
-    
-  </header>
-    
-    <div class= "container">
+   <div class="container pushDown">
+      <div id="aboutAnch"></div>
        
-        <div class= "main-content">
+        <div class="row" id="mainContent">
 
-           <h1>About Me</h1>
+            <div class="panel panel-fluid paditRight" id="aboutMe">
            
-           <img id="AboutImg"src=assets/images/IMG_0557.jpg width="200" height="150" alt="22449909_10100749672696881_1537458741193447459_n">
 
-            <p>Jeff Cameron: moved to Savannah from Florida via a two year stint in Southern California. Passionate about the water, he’s never lived off the coast. He received a Communication Studies degree from Stetson University, and began his professional life at Brainchild Corporation, developing e-learning content solutions for higher student achievements.
-            Following his passion to get outdoors and on the water, he transitioned in to a sales career that took him out West to the surfing capital of the world. </p>
+       
+               <div class="row">
+
+                <div class="col-xs-10 col-md-8 col-lg-6 makeitMiddle" id="aboutAnch">
+                <img src="assets/images/IMG_0557.jpg" id="aboutIMG" alt="Jeff Cameron" class="img-circle">
             
-            <p>Returning East, he utilized his sales skillset in the non-profit sector as a job coach for individuals with disabilities. Now, Jeff is returning to his tech roots by attending Georgia Tech’s Web Developer Bootcamp. He sees endless opportunity in tech to create. At his core, Jeff is a creative individual with a mind for problem-solving. 
-            </p>
+                <h1>Bio</h1>
+                <p class= "aboutMeText">
+                <p>   Following his passion to get outdoors and on the water, he transitioned in to a sales career that took him out West to the surfing capital of the world. </p>
+                <p>Returning East, he utilized his sales skillset in the non-profit sector as a job coach for individuals with disabilities. Now, Jeff is returning to his tech roots by attending Georgia Tech’s Web Developer Bootcamp. He sees endless opportunity in tech to create. At his core, Jeff is a creative individual with a mind for problem-solving. 
+                </p>
 
+              </div>
+                 </div>
+		    	</div>
+                   
+         </div>
+         
+       
+       
+  
+      
+      </div>
+
+
+      <div id="portAnch"></div><p></p><p></p>
+    <div class= "container" id="gallery">
+       
+        <div class= "portfolio">
+               <div class="row">
+                 <h1>Portfolio</h1>
+          <div class="thumbnail">
+          <img src= "assets/images/jquerytrivia.png" > 
+            <div class="caption">
+              <h3>Jquery Trivia</h3>
+              
+              <p> <a href="trivia/trivia.html" class="btn btn-default" role="button">Play</a></p>
+            </div>
+         
         </div>
-
-        <div class="connect">
-
-            <h2>Connect with Me</h2>
-            <a href="https://github.com/jcameronjeff" class="hvr-grow"><img src="assets/images/if_github_circle_black_107161.png" width="80" height="80" alt="Git Hub"></a>
-            <a href="https://www.linkedin.com/in/jcameronjeff/" class="hvr-grow"><img src="assets/images/if_51-linkedin_104452.png" width="80" height="80" alt="linkedin"></a>
-             <a href="https://stackoverflow.com/users/8903513/jeff-cameron" class="hvr-grow"> <img src="assets/images/if_stackoverflow_rounded_394191.png" width="80" height="80" alt="StackOverflow"></a>
-
+          
+          <div class="thumbnail">
+          <img src= "assets/images/JqueryCrystalGame.jpg" > 
+            <div class="caption">
+              <h3>Jquery Crystals</h3>
+           
+              <p><a href="crystals.html" class="btn btn-default" role="button">Play</a></p>
+            </div>
+         
         </div>
+       
+          <div class="thumbnail">
+          <img src= "assets/images/guardianangel.png"> 
+            <div class="caption">
+              <h3>Guardian Angel</h3>
+              
+              <p> <a href="https://guardianangelbracelets.shop"  class="btn btn-default" role="button">View</a></p>
+        </div>
+       
+         
+        </div>
+      </div>
+      
+              
+                  
+        </div>
+      </div>
+      <div class="row">
+          <div class="panel panel-fluid" id="connect">
 
-    </div>
-    
+                
 
+                 <div class="panel-body">
 
-  <footer>
-    	&copy; Copyright 2017 Jeff Cameron
-  </footer>
-</body>
+           <a href="mailto:jcameronjeff@gmail.com" class="hvr-grow"><img src="images/email.jpg" width="50" height="50" alt="Email"></a><br><p></p>
+           <a href="https://github.com/jcameronjeff" class="hvr-grow"><img src="assets/images/if_github_circle_black_107161.png" width="60" height="60" alt="Git Hub"></a><br>
+           <a href="https://www.linkedin.com/in/jcameronjeff/" class="hvr-grow"><img src="assets/images/if_51-linkedin_104452.png" width="60" height="60" alt="linkedin"></a><br>
+            <a href="https://stackoverflow.com/users/8903513/jeff-cameron" class="hvr-grow"> <img src="assets/images/if_stackoverflow_rounded_394191.png" width="60" height="60" alt="StackOverflow"></a>
+
+                </div>
+                    </div>
+            </div>      
+          
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="assets/js/bootstrap.min.js"></script>
+ 
+  </body>
 </html>

@@ -1,499 +1,109 @@
-/*
-/*
-* Teal color (used for headings and backgrounds): `#00D6D8`
-   * Regular font color (used for paragraphs and all text besides the headings): `#777777`
-   * Main header background color: `#ffffff`
-   * Main header border color: `#cccccc`
-   * Footer background color: `#666666`
-   * Main content background color: `#ffffff`
-   * Main content border color: `#dddddd`
-*/
-
 
 body {
-     font-family: "Georgia", 'Times, Times New Roman, serif';
+	background-image: url("../images/background.jpg");
+	background-size: cover;
+	background-repeat: none;
+	background-attachment: fixed;
 }
-
-header {
-    width: auto;
-    background-color: #fff;
-    height: 90px;
-    border-bottom-style:solid;
-    border-bottom-width: 3px;
-    border-bottom-color: #cccccc;
-    
+.panel {
+	border: none;
+	background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: none;
 }
-
-/*separated header, menu, and h1 to get the nav list items where I wanted while making the header span unlimited x */
-
-.menubar {
-    max-width: 960px;
-    margin: 0 auto;
-    height: 90px;
+.thumbnail {
+	width: 300px;
+	border: none;
+	background-color: rgba(255, 255, 255, 0.85);
+	box-shadow: none;
+	margin: 0 auto;
 }
-
-h1 {
-  
-   font-size: 24px;
+.pushDown{
+	margin-top: 75px;
 }
-
-h2 {
-    font-size: 22px;
-}
-
-p {
-    font-size: 18px;
-}
-
-
-header h1{
-    float:left;
-    margin-left: 0px;
-    background-color:#00D6D8;
-    padding: 33px;
-    margin-right: 40%;
-    color: #ffffff;
-    
-}
-
-
-/*Nav Bar*/
-
-.nav {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  
-}
-
-.nav ul {
-	padding: 0;
-	display: inline-block;
-    text-align: center;
+body  h1, h2, h3 {
+	color: #00D6D8;
 
 }
 
-
-.nav ul li {
-	display: inline-block;
-	list-style-type: none;
-    padding: 16px;
-    font-size: 16px;
-    color: #777777;
-    border-right:solid 1px rgba(119, 119, 119, 0.47);    
+.makeitMiddle {
+	margin: 0 auto;
+}
+.paditRight {
+	padding-left: 50px;
 }
 
-a {
-    text-decoration:none; 
-	color: #777777;
+#aboutAnch{
+	margin-bottom: 30px;
 }
 
-a:visited {
-        color: #777777}
-
-a:hover {
-    color:#4aaaa5;
-}
-
-
-/*making the nav bar vertical dividers*/
-
-ul li:nth-child(3){
-    border-right: none;  
+#aboutMe {
+	text-align: right;
+	
+	padding: 0 30px;
+	/* -webkit-box-shadow: 0px 3px 38px 7px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 3px 38px 7px rgba(0,0,0,0.15);
+	box-shadow: 0px 3px 38px 7px rgba(0,0,0,0.15);
+	 */
 }
 
 
-
-/*about me container*/
-
-.container {
-    width: 960px;
-    height: auto;;
-  margin: 50px auto;   
+#aboutMe p {
+	padding-top: 15px;
 }
 
-.aboutme {
-
-    float: left;
-    width: 650px;
-    background-color: #ffffff;
-    margin-bottom: 50px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #dddddd;
+#aboutIMG {
+	width: 50%;
+	max-width: 250px;
+	float: left;
+	padding: 20px;
 }
-.aboutme h1{
-    margin: 20px;
-    padding: 20px;
-    border-bottom-style: solid;
-    border-bottom-width: 3px;
-    border-bottom-color: #dddddd;
-    color: #00D6D8;
-}
-.aboutme img {
-    float:left;
-    margin: 15px 20px 5px 20px;
-    padding-bottom:10px
-    
-}
-
-.aboutme p {
-    margin: 20px;
-    margin-top: 30px;
-    line-height: 140%;
-    color: #777777;
-    
-}
-
-
- /*social box*/
-
-.connect {
-    float: left;
-    width: 270px;
-    margin-left: 36px;
-    background-color: #ffffff;
-    text-align: center;
-    border-style: solid;
-    border-width: thin;
-    border-color: #dddddd;
-    
-}
-
-.connect h2 {
-    padding: 15px;
-    margin: 15px;
-    border-bottom-style: solid;
-    border-bottom-width: 40px;
-    border-bottom-width: 2px;
-    border-bottom-color: #dddddd;
-    color: #00D6D8;
-}
-.connect img {
-    
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-/*Hover Grow on Social Buttons*/
-
-.hvr-grow {
-    display: inline-block;
-    vertical-align: middle;
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    transition-duration: 0.3s;
-    transition-property: transform;
-}
-
-.hvr-grow:hover,
-.hvr-grow:focus,
-.hvr-grow:active {
-    transform: scale(1.1);
-}
-
-/*Footer Content*/
-
-footer {
-    clear:both;
-    width: 100%;
-    background-color: #666666;
-    color: #ffffff;
-    height: 90px;
-    text-align: center;
-    line-height: 90px;
-    border-top-style: solid;
-    border-top-width: 6px;
-    border-top-color: #00D6D8;  
-}
-
-
-/*portfolio */
-
-/*Gallery COULD NOT figure out how to make the images float left so that odd numbers wouldn't be centered finally wrapped the images in the gallery class and set a margin that worked somehow ??? */
-
-.port-wrapper {
-    margin: 0 auto;
-}
-.portfolio {
-float: left;
-background-color: #ffffff;
-margin-bottom: 50px;
-border-style: solid;
-border-width: 1px;
-border-color: #dddddd;
-text-align: left;
-padding-bottom: 40px;
-max-width: 650px;
-position: relative;
-}
-
-.port-container {
-    max-width: 875px;
-    position: relative;
-    margin: 40px auto;
-}
-.portfolio h1{
-margin: 20px 5%;
-padding: 20px;
-border-bottom-style: solid;
-border-bottom-width: 3px;
-border-bottom-color: #dddddd;
-color: #4aaaa5;
-}
-
-.gallery {
-    position: relative;
-    margin: 50px 35px;
-}
-
-.image1 {
-    position: relative;
-    width: 270px;
-    height: 100%;
-    float: left;
-    padding: 10px;
-}
-
-/*captions were difficult, I honestly don't know how I got here*/
-
-.desc1 {
-    padding: 10px 15px;
-    background: #00D6D8;
-    color: white;
-    text-align: center;
-    font-size: 1em;
-    font-family: 'Georgia', 'Times New Roman', Times, serif; 
-    position: absolute;
-    width: 240px;
-    bottom: 20%;
-    z-index: 1;
-}
-
-/* Contact Form: webkits wouldn't work at first for some reason*/
-
-
-
-::-webkit-input-placeholder { /* Chrome */
-  color: rgba(184, 184, 184, 0.72);
-}
-:-ms-input-placeholder { /* IE 10+ */
- color: rgba(184, 184, 184, 0.72);
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: rgba(184, 184, 184, 0.72);
-}
-:-moz-placeholder { /* Firefox 4 - 18 */
-  color: rgba(184, 184, 184, 0.72);
-}
-
-.contact {
-    float: left;
-    width: 650px;
-    background-color: #ffffff;
-    margin-bottom: 50px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #dddddd;
-    padding-bottom: 40px;
-}
-.contact h1{
-    margin: 20px 5%;
-    padding: 20px;
-    border-bottom-style: solid;
-    border-bottom-width: 3px;
-    border-bottom-color: #dddddd;
-    color: #00D6D8;
-    text-align: left;
-}
-
-.form {
-position: relative;
-width: 500px;
-margin-left: 50%;
-left: -257px;
-font-family: "Georgia", 'Times, Times New Roman, serif';
-color: #777777;
+#connect {
+	background-color: rgba(255, 255, 255, 0.85);
+	text-align: center;
+	/* margin-bottom: 0 !important; */
+	position: fixed;
+	top: 65%;
+	right:0;
+	display: block;
+	/* -webkit-box-shadow: 0px 3px 38px 7px rgba(0,0,0,0.27);
+	-moz-box-shadow: 0px 3px 38px 7px rgba(0,0,0,0.27);
+	box-shadow: 0px 3px 38px 7px rgba(0,0,0,0.27); */
 
 }
-
-
-input[type=text] {
-    width: 100%;
-    padding: 10px;
-    color: #777;
-    border: 1.5px solid #ccc;
-    border-radius: 2px;
-    outline: none;
-    text-align: left;
-    margin-bottom: 10px;
+#gallery {
+	padding: 50px;
 }
 
-
-
-input[type=email] {
-   width: 100%;
-    padding: 10px;
-    color: #777;
-    border: 1.5px solid #ccc;
-    border-radius: 2px;
-    outline: none;
-    text-align: left;
-    margin-bottom: 10px;
+.aboutMeText {
+	padding-top: 5px;
 }
 
-
-input[type=message] {
-    width: 100%;
-    height: 300px;
-    padding: 10px;
-    color: #777;
-    border: 1.5px solid #ccc;
-    border-radius: 1px;
-    outline: none;
-    text-align: left;
-}
-
-
-@media screen and (max-width: 980px) {
-    body {
-        max-width: 100%;
-    }
-
-
-    .port-container {
-        position: relative;
-        margin: 40px 10%;
-    }
-    .portfolio {
-        float: left;
-    background-color: #ffffff;
-    margin-bottom: 50px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #dddddd;
-    text-align: left;
-    padding-bottom: 40px;
-    max-width: 410px;
-    position: relative;
-    }
-    
-    
-
-
-
-
-
-}
-
-@media screen and (max-width: 768px) {
-
-	.container {
-		  position: relative;
-		  min-height: 1px;
-		  padding-right: 15px;
-		  padding-left: 15px;
+.form-area
+{
+    background-color: #FAFAFA;
+	padding: 10px 40px 60px;
+	margin: 10px 0px 60px;
+	border: 1px solid GREY;
 	}
 
-    .menubar {
-        max-width: 768px;
-    }
-    
-    header {
-        max-width: 768px;
-    }
-
-    .aboutme .container .port-container {
-            float: left;
-            max-width: 728px;
-            width: 100%;
-            margin-left: 20px;
-            margin-right: 20px;
-    }
 
 
-    .portfolio {
-        max-width: 728px;
 
-   
-    }
+	.hvr-grow {
+		display: inline-block;
+		vertical-align: middle;
+		transform: translateZ(0);
+		box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+		backface-visibility: hidden;
+		-moz-osx-font-smoothing: grayscale;
+		transition-duration: 0.3s;
+		transition-property: transform;
+	}
+	
+	.hvr-grow:hover,
+	.hvr-grow:focus,
+	.hvr-grow:active {
+		transform: scale(1.1);
+	}
 
-    .gallery {
-        margin: auto 10%;
-
-    }
-    header h1 {
-        margin-right: 25%;
-        margin-left: 10px
-    }
-
-    .connect {
-        width: 718px;
-        margin-left: 18px;
-        margin-right: 18px;
-        text-align: left;
-        padding-left: 10px;
-        margin-bottom: 40px;
-    }
-}
-
-@media screen and (max-width: 640px) {
-
-    .menubar {
-        max-width: 640px;
-    }
-
-    header {
-        max-width: 640px;
-    }
-    
- 
- 
-
-  .port-wrapper{
-      margin: 0px;
-      padding: 0px;
-     }
-
-    .aboutme, .port-container {
-
-			float: left;
-            max-width: 600px;
-            margin: 0 auto;
-            }
-
-    .portfolio {
-        max-width: 600px;
-         
-    }
-
-    .gallery {
-        margin-left: 0;
-    }
-
-    
-    .image1 {
-        margin: 0 auto;
-    }
-    .img1 {
-        max-width: 540px;
-        width: 200%;
-    }
-    
-    header h1 {
-        margin-right: 15%;
-        margin-left: 10px
-        
-    }
-
-    .connect {
-        width: 590px;
-        margin-left: 15px;
-        margin-right:15px;
-        text-align: left;
-        padding-left: 10px;
-        margin-bottom: 30px;
-    }
-
-}
+	

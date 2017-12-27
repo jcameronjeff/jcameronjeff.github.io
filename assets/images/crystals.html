@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Crystals</title>
+
+      <!-- Added link to the jQuery Library -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- Added a link to Bootstrap-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <style type="text/css">
+      
+      body {
+        background-image: url("images/body-back.jpeg");
+        background-size: 100%;
+      }
+      
+      .container {
+        margin-top: 30px;
+        border-radius: 20px;
+        max-width: 800px;
+        width: 100%
+
+      }
+
+      .gamePanel {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+
+      button img {
+        max-height: 125px;
+        max-width: 125px;
+        background-color: rgba(255, 255, 255, 0);
+        
+      }
+
+      button {
+        padding: 0px;
+        border: 0;
+      }
+      /* .panel-body {
+        max-width: 750px;
+        margin: 0 auto;
+      } */
+     
+  
+      .pChild {
+        max-width: 325px;
+       padding: 5px;
+    
+      }
+      button {
+    
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+      }
+      button:focus {
+       outline: none;
+      }
+
+      button:hover
+      {
+          transform: scale(1.3);
+          transition-duration: 0.3s;
+      }
+      button:active {
+        transform: translateY(-20px);
+      }
+      
+    #buttons {
+      text-align: center;
+      padding: 15px;
+      margin: 10px;
+    }
+    
+      </style>
+  </head>
+</head>
+
+<body>
+  <div class="container">
+ 
+      <div class="panel panel-default panel-primary gamePanel">
+          <div class="panel-heading">
+              <h1>Crystal Game</h1>
+              <div id="player-name">Text</div>
+              <p id="directions"> You will be given a random Target Number at the beginning of each game. 
+                By clicking on a crystal you add a specific amount to you score. Win the game by matching your score
+              to the target number. If your score goes over, you lose the game. The value of each crystal is reset after each game.</p>
+          </div>
+
+ <!-- //The player will be shown a random number at the start of the game. -->
+ <div class= "panel-body">
+    <div class="col-lg-12 col-md-12">
+        <div id= "overAll" class= "row">
+            <div class= "col-xs-6 col-sm-6 col-md-6">
+          <h3 id="wins" class="panel panel-primary pChild"></h3>
+        </div>
+        <div class= "col-xs-6 col-sm-6 col-md-6">
+          <h3 id="losses" class="panel panel-primary pChild"></h3>
+        </div>
+          </div>
+    <div class= "row">
+        <div class= "col-xs-6 col-sm-6 col-md-6">
+  <div id="showRandom" class=" panel panel-primary pChild"></div>
+  </div>
+  <div class= "col-xs-6 col-sm-6 col-md-6">
+    <div id="guessCounter" class=" panel panel-primary pChild"></div>
+</div>
+</div>
+</div>
+</div>
+
+  <!-- There will be four crystals displayed as buttons on the page. -->
+  
+    <div class= "panel-body">
+      <div class= "row">
+     
+  <div id="buttons"> 
+    
+    <button id="button1" class= "crystals" value ="0"> <img src="images/crystal1.gif" width="125px" height="125px"></button>
+    <button id="button2" class= "crystals" value ="0"> <img src="images/crys4.gif" height="200px"></button>
+    <button id="button3" class= "crystals" value ="0"> <img src="images/crystal5.gif" height="200px"></button>
+    <button id="button4" class= "crystals" value ="0"><img src="images/crys1.gif" height="200px"></button>
+
+</div>
+
+</div>
+</div>
+  
+
+</div>
+
+
+
+  <script type="text/javascript">
+
+
+  var randomNumber = 0; //random number between 19-120;
+
+  var totalScore = 0; //keeps track of players number.
+
+
+  var numberGuess = 0;
+
+  function getName() {
+    var yourName = prompt("Please enter your name", "Name");
+    showName = $("<h3> Player: " + yourName + "</h3>");
+    if (yourName != null) {
+      $("#player-name").html(showName);
+    }
+}
+
+//counters
+  var guessCounter = 0;
+  var gamesWon = 0;
+  var gamesLost = 0;
+
+  //crystal values
+  var crystalOne = 0; //random number between 1-12
+  var crystalTwo = 0; //random number between 1-12
+  var crystalThree = 0; //random number between 1-12
+  var crystalFour = 0; //random number between 1-12
+
+//Calling functions
+      getName();
+      randomNumber = mainNum(randomNumber);
+      crystalOne = crystalNum(crystalOne);
+      crystalTwo = crystalNum(crystalTwo);
+      crystalThree = crystalNum(crystalThree);
+      crystalFour = crystalNum(crystalFour);
+      crystalVal();
+
+
+//FUNCTIONS
+
+
+//sets the number goal to a tranom number
+  function mainNum(x) {
+      var rand = (Math.floor((Math.random() * 120) + 1));
+       return x += rand;
+    };
+  
+    function render(){  
+      showNum = $("<h3> Target: " + randomNumber + "</h3>");
+      $("#showRandom").html(showNum);
+
+      showWins = $("<h3>Wins: " + gamesWon + "</h4>");
+      $("#wins").html(showWins);
+
+      showLost = $("<h3>Losses: " + gamesLost + "</h4>");
+      $("#losses").html(showLost);
+
+      showCount = $("<h3>Score: " + totalScore + "</h3>");
+      $("#guessCounter").html(showCount);
+
+      };
+  
+  // sets the crystals variables to random numbers. I set it up this way for easier math later.
+  // try a clickfuntion directly on class.
+
+  function crystalNum(x) {
+          var randCrystal = (Math.floor((Math.random() * 12) + 1));
+          return x += randCrystal;
+        };
+        render();
+
+// Changes the button values in preparation for onclick.
+
+function crystalVal() {
+   buttonOne = document.getElementById("button1");
+    buttonTwo =  document.getElementById("button2");
+    buttonThree = document.getElementById("button3");
+    buttonFour = document.getElementById("button4");
+
+    buttonOne.value = crystalOne;
+    buttonTwo.value = crystalTwo;
+    buttonThree.value = crystalThree;
+    buttonFour.value = crystalFour;
+};
+
+  function guesser()  {
+    digit = $(this).val();
+    digit = parseInt(digit);
+
+          // if (totalScore < randomNumber){
+            totalScore = totalScore + digit;
+            render();
+          // }
+           if (totalScore === randomNumber){
+            alert("you win!");
+          gamesWon = gamesWon +1;
+          render();
+          clearValues();
+          newGame();
+          
+            
+            }
+            else if(totalScore > randomNumber){
+              alert("you lose!");
+              gamesLost = gamesLost + 1;
+              render();
+              clearValues();
+              newGame();
+            }
+    
+    console.log("total score = " + totalScore);
+  };
+
+  $(".crystals").on("click", guesser);
+
+function clearValues() {
+    buttonOne = document.getElementById("button1");
+    buttonTwo =  document.getElementById("button2");
+    buttonThree = document.getElementById("button3");
+    buttonFour = document.getElementById("button4");
+
+        buttonOne.value = 0;
+        buttonTwo.value = 0;
+        buttonThree.value = 0;
+        buttonFour.value = 0;
+        totalScore = 0;
+        randomNumber = 0;
+        render();
+
+            crystalOne = 0;
+            crystalTwo = 0;
+            crystalThree = 0;
+            crystalFour = 0;
+
+}
+
+function newGame (){
+      randomNumber = mainNum(randomNumber);
+
+      crystalOne = crystalNum(crystalOne);
+      crystalTwo = crystalNum(crystalTwo);
+      crystalThree = crystalNum(crystalThree);
+      crystalFour = crystalNum(crystalFour);
+
+            buttonOne = document.getElementById("button1");
+            buttonTwo =  document.getElementById("button2");
+            buttonThree = document.getElementById("button3");
+            buttonFour = document.getElementById("button4");
+
+              buttonOne.value = crystalOne;
+              buttonTwo.value = crystalTwo;
+              buttonThree.value = crystalThree;
+              buttonFour.value = crystalFour;
+              render()
+};
+
+
+  </script>
+
+</body>
+
+</html>

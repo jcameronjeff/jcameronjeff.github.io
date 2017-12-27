@@ -36,7 +36,6 @@ header {
 }
 
 
-
 header h1 {
 	background-color: #00D6D8;
 	color: #fff;
@@ -170,6 +169,9 @@ color:#4aaaa5;
     padding: 10px;
 }
 
+.portImage {
+    max-width: 270px;
+}
 /*captions were difficult, I honestly don't know how I got here*/
 
 .desc1 {
