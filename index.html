@@ -31,9 +31,9 @@
               </div>
               <div class="collapse navbar-collapse navbar-right" id="myNavbar">
                 <ul class="nav navbar-nav">
-                  <li ><a href="index.html">Home</a></li>
-                    <li><a href="#aboutAnch">About</a>
-                  <li><a href="#portAnch">Portfolio</a></li>
+                  <li ><a id="scrTop" href="#">Home</a></li>
+                    <li><a id="aboutScr">About</a>
+                  <li><a id="portScr">Portfolio</a></li>
                   <li><a href="mailto:jcameronjeff@gmail.com" >Contact Me</a></li>
                 </ul>
 
@@ -184,8 +184,29 @@
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       <script>
-      $('.nav a').on('click', function(){
-    $('.navbar-toggle').click() //bootstrap 3.x by Richard
-});</script>
+     
+      $('#aboutScr').on('click', function(){
+          $('html, body').animate({
+        scrollTop: $("#aboutAnch").offset().top-20
+          }, 1000);
+          $('.navbar-toggle').click() 
+        });
+
+         
+      $('#portScr').on('click', function(){
+          $('html, body').animate({
+        scrollTop: $("#portAnch").offset().top-20
+          }, 1000);
+          $('.navbar-toggle').click() 
+        });
+
+        $('#scrTop').on('click', function(){
+          $('html, body').animate({
+        scrollTop: $("#welcome").offset().top-60
+          }, 1000);
+          $('.navbar-toggle').click() 
+        });
+
+</script>
   </body>
 </html>

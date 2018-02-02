@@ -144,7 +144,9 @@ overflow: hidden;
 	}
 
 
-
+.navbar a:hover{
+	cursor:pointer;
+}
 
 	.hvr-grow {
 		display: inline-block;
