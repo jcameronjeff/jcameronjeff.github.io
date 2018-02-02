@@ -4,19 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <title>Jeff Cameron</title>
+<!-- Latest compiled and minified JavaScript -->
 
-    <!-- Bootstrap -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
   </head>
 
@@ -24,7 +19,7 @@
   <body>
 
     <header>
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
             <div class="container-fluid">
               <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -36,7 +31,7 @@
               </div>
               <div class="collapse navbar-collapse navbar-right" id="myNavbar">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="index.html">Home</a></li>
+                  <li ><a href="index.html">Home</a></li>
                     <li><a href="#aboutAnch">About</a>
                   <li><a href="#portAnch">Portfolio</a></li>
                   <li><a href="mailto:jcameronjeff@gmail.com" >Contact Me</a></li>
@@ -49,14 +44,21 @@
 
 
     </header>
+    <div class="container-fluid" id="hero"> <div id="welcome"><h1>Jeff Cameron</h1><br>
+      <h3> Web Developer</h3></div> <video autoplay muted loop id="bgVid">
+     
+      <source src="assets/images/bg.mp4" type="video/mp4">
+      
+  </video> </div>
+   
 
-
-   <div class="container pushDown">
+   <div class="container wrapper">
+   <div class="container">
       <div id="aboutAnch"></div>
 
         <div class="row" id="mainContent">
 
-            <div class="panel panel-fluid paditRight" id="aboutMe">
+            <div class="panel paditRight" id="aboutMe">
 
 
 
@@ -119,7 +121,7 @@
         <div class= "portfolio">
                <div class="row">
                  <h1>Portfolio</h1>
-          <div class="thumbnail">
+          <div class="thumbnail col-sm-4">
           <img src= "assets/images/jquerytrivia.png" >
             <div class="caption">
               <h3>Jquery Trivia</h3>
@@ -129,7 +131,7 @@
 
         </div>
 
-          <div class="thumbnail">
+          <div class="thumbnail col-sm-4">
           <img src= "assets/images/JqueryCrystalGame.jpg" >
             <div class="caption">
               <h3>Jquery Crystals</h3>
@@ -139,7 +141,7 @@
 
         </div>
 
-          <div class="thumbnail">
+          <div class="thumbnail col-sm-4">
           <img src= "assets/images/guardianangel.png">
             <div class="caption">
               <h3>Guardian Angel</h3>
@@ -152,9 +154,9 @@
       </div>
 
 
-
         </div>
       </div>
+    </div>
       <div class="row">
           <div class="panel panel-fluid" id="connect">
 
@@ -175,9 +177,15 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="assets/js/bootstrap.min.js"></script>
-
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script>
+      $('.nav a').on('click', function(){
+    $('.navbar-toggle').click() //bootstrap 3.x by Richard
+});</script>
   </body>
 </html>

@@ -1,13 +1,33 @@
 
-body {
+.wrapper {
 	background-image: url("../images/background.jpg");
 	background-size: cover;
 	background-repeat: none;
 	background-attachment: fixed;
 }
+#bgVid { 
+    
+    position: fixed;
+    overflow: hidden;
+    height: 100vh;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+  }
+#hero{
+	margin-bottom: 100vh;
+}
+#hello{
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	color: white;
+}
+
 .panel {
 	border: none;
-	background-color: rgba(255, 255, 255, 0.85);
+	background-color: rgba(255, 255, 255, 0.60);
     box-shadow: none;
 }
 .thumbnail {
@@ -15,13 +35,50 @@ body {
 	border: none;
 	background-color: rgba(255, 255, 255, 0.85);
 	box-shadow: none;
-	margin: 0 auto;
+ 
+	padding:20px;
+ 
 }
+.container{
+	background-color: rgba(255, 255, 255, 0.60);
+	width: 90%;
+}
+
+
 .pushDown{
 	margin-top: 75px;
 }
+#welcome  {
+	z-index: 1000;
+	position: absolute;
+	margin-top: 10%;
+	margin-left: 10%;
+}
+#welcome h1 {
+	color: white;
+	font-size: 10rem;
+	margin-bottom: -20px;
+}
+#welcome h3 {color:white; font-size: 5rem}
+
 body  h1, h2, h3 {
 	color: #00D6D8;
+
+}
+.wrapper {
+    
+   
+margin: 30% auto 0 auto;
+  width: 100%;
+ 
+  min-width: 36rem;
+  min-height: 55rem;
+font-size: 20px;
+  /* -webkit-box-shadow: 0px 1px 18px 6px rgba(0,0,0,0.27);
+-moz-box-shadow: 0px 1px 18px 6px rgba(0,0,0,0.27);
+box-shadow: 0px 1px 18px 6px rgba(0,0,0,0.27); */
+text-align: center;
+overflow: hidden;
 
 }
 
