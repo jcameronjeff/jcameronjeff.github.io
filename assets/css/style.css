@@ -143,9 +143,20 @@ overflow: hidden;
 	border: 1px solid GREY;
 	}
 
+ 
 
+.navbar-brand {
+	padding-top: 2rem;
+	font-size: 3rem;
+}
 .navbar a:hover{
 	cursor:pointer;
+}
+.navbar li{
+	font-size: 2rem;
+	padding-top: 1rem;
+	text-align: center;
+
 }
 
 	.hvr-grow {

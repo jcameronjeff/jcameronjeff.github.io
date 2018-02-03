@@ -171,7 +171,7 @@
         </div>
       </div>
     </div>
-      <div class="row">
+      <!-- <div class="row">
           <div class="panel panel-fluid" id="connect">
 
 
@@ -185,7 +185,7 @@
 
                 </div>
                     </div>
-            </div>
+            </div> -->
 
 
     <!-- Bootstrap core JavaScript
@@ -221,6 +221,12 @@
           $('.navbar-toggle').click() 
         });
 
+        $('.navbar-brand').on('click', function(){
+          $('html, body').animate({
+        scrollTop: $("#welcome").offset().top-60
+          }, 1000);
+           
+        });
 </script>
   </body>
 </html>
